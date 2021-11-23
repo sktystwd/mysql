@@ -1,0 +1,16 @@
+pkg-install-chrony:
+  pkg-installed:
+    - names: 
+      - chrony
+
+/etc/chronyd.conf:
+  file.managed:
+    - source: salt://init/chrony/files/chronyd.conf
+    - user: root
+    - group: root
+    - mode: '0644'
+
+chrony.service:
+  service.running:
+    - enable: true 
+ 
