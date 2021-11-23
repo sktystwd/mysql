@@ -1,5 +1,0 @@
-prod:
-  '*':
-     - apache
-     - php
-     - mysql
